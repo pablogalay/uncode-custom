@@ -107,3 +107,18 @@ The patch_system.sh script performs the following:
 - Updates frontend plugins such as parsable_text.py and hdlgrader.js
 - Clears Python bytecode caches (__pycache__) after changes
 - No need to modify or regenerate hdlgrader.min.js if use_minified_js: false is set
+
+## 🧪 Step 3: Test the Platform
+
+After running the patch script, launch INGInious:
+
+```bash
+cd ~/uncode
+conda activate python3.6_uncode
+inginious-webapp
+```
+
+Open your browser and go to: 
+```arduino
+http://localhost:8080
+```
