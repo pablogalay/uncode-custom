@@ -96,7 +96,7 @@ use_minified_js: false
 Once the base platform is installed, apply the custom patches:
 
 ```bash
-git clone https://github.com/your_username/uncode-custom.git
+git clone https://github.com/pablogalay/uncode-custom.git
 cd uncode-custom
 chmod +x patch_system.sh
 ./patch_system.sh
