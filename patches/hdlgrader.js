@@ -243,6 +243,8 @@ function parseHDLline(line) {
             while (i < tokens.length && tokens[i].trim() !== 'OUTPUTS') {
                 inputName = tokens[i++].trim();
                 inputValue = tokens[i++].trim();
+
+                if("xUZWLH_".includes(inputValue)) inputValue = 'X';
  
                 result.inputs[inputName] = inputValue;
             }
@@ -251,13 +253,14 @@ function parseHDLline(line) {
             while (i < tokens.length) {
                 outputName = tokens[i++].trim();
                 outputValue = tokens[i++].trim();
+
+                if ("xUZWLH_".includes(outputValue)) outputValue = 'X';
  
                 result.outputs[outputName] = outputValue;
             }
         } else {
             i++;
         }
- 
     }
     return result;
 }
